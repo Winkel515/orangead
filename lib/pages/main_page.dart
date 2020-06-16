@@ -88,11 +88,11 @@ class _MainPageState extends State<MainPage> {
           ),
           ResultOverlay(showOverlay: showOverlay, overlayText: overlayText),
           Positioned(
-            right: 25,
+            right: 0,
             height: MediaQuery.of(context).size.height,
             child: SafeArea(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ApiButton(
                     onPressed: () {
@@ -108,6 +108,17 @@ class _MainPageState extends State<MainPage> {
                       Icons.add,
                       color: Colors.black,
                       size: 40,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Text(
+                      "Change",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: showOverlay ? Colors.white : Colors.black54,
+                      ),
                     ),
                   ),
                   ApiButton(
